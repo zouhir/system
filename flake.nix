@@ -15,6 +15,10 @@
         url = "github:lnl7/nix-darwin/master";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    alacritty-theme = {
+    	url = "github:alexghr/alacritty-theme.nix";
+    };
   };
 
   outputs = {
@@ -22,6 +26,7 @@
     nixpkgs,
     home-manager,
     darwin,
+    alacritty-theme,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -40,9 +45,13 @@
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
+						({ config, pkgs, ... }: { nixpkgs.overlays = [ alacritty-theme.overlays.default ]; })
             ./modules/home.nix
             ./modules/pkgs.nix
             ./modules/bash/default.nix
+            ./modules/git.nix
+            ./modules/gh.nix
+            ./modules/alacritty.nix
         ];
       };
     };

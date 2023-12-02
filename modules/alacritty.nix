@@ -8,10 +8,11 @@
        		x = 8;
        		y = 28;
        	};
-       	decorations = transparent;
+       	decorations = "transparent";
        	opacity = 1;
        };
 			font.size = 12.0;
+			import = [ pkgs.alacritty-theme.github_dark_default ];
     };
   };
 }
