@@ -1,7 +1,6 @@
 { ... }: {
   programs.git = {
     enable = true;
-    delta.enable = true;
     userName = "Zouhir Chahoud";
     userEmail = "zouhir@users.noreply.github.com";
     extraConfig = {
