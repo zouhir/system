@@ -52,6 +52,7 @@
             ./modules/git.nix
             ./modules/gh.nix
             ./modules/alacritty.nix
+            ./modules/readline.nix
         ];
       };
     };
