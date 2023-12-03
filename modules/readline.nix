@@ -8,6 +8,8 @@
 			# commands (i.e. more intelligent Up/Down behavior)
 			"\\e[B" = "history-search-forward";
 			"\\e[A" = "history-search-backward";
+			"\\t" = "menu-complete";
+			"\\e[Z" = "menu-complete-backward";
     };
 
 		#https://github.com/mathiasbynens/dotfiles/blob/main/.inputrc
