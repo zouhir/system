@@ -10,9 +10,10 @@ home:
 	--extra-experimental-features flakes
 
 darwin-build:
-	nix build "./#darwinConfigurations.$(HOSTNAME).system" \
+	nix run nix-darwin \
 	--extra-experimental-features nix-command \
-	--extra-experimental-features flakes
+	--extra-experimental-features flakes \
+	-- switch --flake .
 
 darwin-enable:
 	./result/sw/bin/darwin-rebuild switch --flake .

@@ -32,14 +32,13 @@
     inherit (self) outputs;
   in {
 
-    darwinConfigurations."mac-mini" = darwin.lib.darwinSystem {
+    darwinConfigurations = {
+      "mac-mini" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [ ./machines/mac.nix ];
+      };
     };
 
-
-    # Standalone home-manager configuration entrypoint
-    # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       "zouhir@mac-mini" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
