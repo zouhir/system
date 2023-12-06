@@ -7,7 +7,7 @@
     defaults = {
       dock = {
         autohide = true;
-        mineffect = "scale"
+        mineffect = "scale";
         enable-spring-load-actions-on-all-items = true;
         minimize-to-application = true;
         show-process-indicators = true;
@@ -15,27 +15,22 @@
         tilesize = 32;
       };
       finder = {
-        DisableAllAnimations = true;
-        NewWindowTarget = "PfDe";
-        NewWindowTargetPath = "file://${HOME}/Desktop/";
         AppleShowAllExtensions = true;
         ShowStatusBar = true;
         ShowPathbar = true;
         _FXShowPosixPathInTitle = true;
-        _FXSortFoldersFirst = true;
         FXDefaultSearchScope = "SCcf";
         FXEnableExtensionChangeWarning = false;
       };
       NSGlobalDomain = {
         "com.apple.springing.enabled" = true;
-        "com.apple.springing.delay" = 0;
-        
-      }
+        "com.apple.springing.delay" = 0.0;
+      };
     };
   };
 
-	environment.shells = with pkgs; [ bashInteractive zsh ];
+  environment.shells = with pkgs; [ bashInteractive zsh ];
   users.users.zouhir = {
-		shell = pkgs.bashInteractive;
+    shell = pkgs.bashInteractive;
   };
 }
