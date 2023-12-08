@@ -35,7 +35,7 @@
     darwinConfigurations = {
       "mac-mini" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        modules = [ ./machines/mac.nix ];
+        modules = [ ../machines/mac.nix ];
       };
     };
 
@@ -45,13 +45,13 @@
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
 						({ config, pkgs, ... }: { nixpkgs.overlays = [ alacritty-theme.overlays.default ]; })
-            ./modules/home.nix
-            ./modules/pkgs.nix
-            ./modules/bash/default.nix
-            ./modules/git.nix
-            ./modules/gh.nix
-            ./modules/alacritty.nix
-            ./modules/readline.nix
+            ../modules/home.nix
+            ../modules/pkgs.nix
+            ../modules/bash/default.nix
+            ../modules/git.nix
+            ../modules/gh.nix
+            ../modules/alacritty.nix
+            ../modules/readline.nix
         ];
       };
     };

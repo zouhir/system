@@ -1,6 +1,6 @@
 { lib, ... }:
 let
-  bashExtra = [ ./prompt.bash ];
+  bashExtra = [ ./path.bash ./prompt.bash ];
   bashExtraContents = map builtins.readFile bashExtra;
 in {
   programs.bash = {

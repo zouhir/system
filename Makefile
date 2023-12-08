@@ -2,12 +2,12 @@ SHELL := /bin/bash
 
 HOSTNAME := $(shell hostname)
 
-home:
+personal-home:
 	home-manager switch --flake ./personal#zouhir@$(HOSTNAME) \
  	--extra-experimental-features nix-command \
 	--extra-experimental-features flakes
 
-darwin:
+personal-darwin:
 	nix run nix-darwin \
 	--extra-experimental-features nix-command \
 	--extra-experimental-features flakes \
