@@ -1,4 +1,8 @@
-{ lib, ... }: {
+{ lib, ... }:
+let
+  bashExtra = [ ./prompt.bash ];
+  bashExtraContents = map builtins.readFile bashExtra;
+in {
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -25,6 +29,6 @@
 
     shellAliases = (import ./aliases/common.nix); 
 
-    initExtra = builtins.readFile ./prompt.bash;
+    initExtra = lib.concatStringsSep "\n" bashExtraContents;
   };
 }

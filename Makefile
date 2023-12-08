@@ -2,21 +2,19 @@ SHELL := /bin/bash
 
 HOSTNAME := $(shell hostname)
 
-darwin: darwin-build darwin-enable
-
 home:
-	home-manager switch --flake .#zouhir@$(HOSTNAME) \
+	home-manager switch --flake ./personal#zouhir@$(HOSTNAME) \
  	--extra-experimental-features nix-command \
 	--extra-experimental-features flakes
 
-darwin-build:
+darwin:
 	nix run nix-darwin \
 	--extra-experimental-features nix-command \
 	--extra-experimental-features flakes \
-	-- switch --flake .
+	-- switch --flake ./personal
 
-darwin-enable:
-	./result/sw/bin/darwin-rebuild switch --flake .
+#darwin-enable:
+#	./result/sw/bin/darwin-rebuild switch --flake .
 
 shell-reset:
 	sudo chsh -s /run/current-system/sw/bin/bash
