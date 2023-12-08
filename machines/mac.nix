@@ -29,7 +29,15 @@
     };
   };
 
+  programs = {
+    bash = {
+      enable: true;
+      enableCompletion: true;
+    };
+  };
+
   environment.shells = with pkgs; [ bashInteractive zsh ];
+
   users.users.zouhir = {
     shell = pkgs.bashInteractive;
   };
