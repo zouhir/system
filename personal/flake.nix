@@ -52,6 +52,7 @@
             ../modules/gh.nix
             ../modules/alacritty.nix
             ../modules/readline.nix
+            ../modules/dircolors.nix
         ];
       };
     };
