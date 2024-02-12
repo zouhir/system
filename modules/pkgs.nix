@@ -10,13 +10,14 @@
     [
       bash-completion
       curl
+      docker
       ffmpeg_6-full
       git-lfs
-      wget
-      nodejs_20
       hugo
-      tmux
       neovim
+      nodejs_20
+      tmux
+      wget
     ] ++ (lib.optionals pkgs.stdenv.isDarwin [
       terminal-notifier
       coreutils
