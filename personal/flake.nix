@@ -50,6 +50,7 @@
             ../modules/bash/default.nix
             ../modules/git.nix
             ../modules/gh.nix
+            ../modules/go.nix
             ../modules/alacritty.nix
             ../modules/readline.nix
             ../modules/dircolors.nix
