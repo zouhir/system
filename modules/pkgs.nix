@@ -10,7 +10,6 @@
     [
       bash-completion
       curl
-      docker
       ffmpeg_6-full
       firebase-tools
       git-lfs
