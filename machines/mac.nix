@@ -6,9 +6,9 @@
       experimental-features = nix-command flakes
     '';
     settings = {
-      trusted-users = [ "root" "zouhir" ]
+      trusted-users = [ "root" "zouhir" ];
     };
-  }
+  };
 
   system = {
     defaults = {
