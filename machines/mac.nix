@@ -23,8 +23,21 @@
         FXEnableExtensionChangeWarning = false;
       };
       NSGlobalDomain = {
-        "com.apple.springing.enabled" = true;
+        _HIHideMenuBar = false;
         "com.apple.springing.delay" = 0.0;
+        "com.apple.springing.enabled" = true;
+        AppleInterfaceStyle = "Dark";
+        ApplePressAndHoldEnabled = false;
+        AppleShowScrollBars = "Always";
+        InitialKeyRepeat = 15;
+        KeyRepeat = 2;
+        NSAutomaticCapitalizationEnabled = false;
+        NSAutomaticDashSubstitutionEnabled = false;
+        NSAutomaticPeriodSubstitutionEnabled = false;
+        NSAutomaticQuoteSubstitutionEnabled = false;
+        NSAutomaticSpellingCorrectionEnabled = false;
+        NSDocumentSaveNewDocumentsToCloud = false;
+        NSWindowResizeTime = 0.1;
       };
     };
   };

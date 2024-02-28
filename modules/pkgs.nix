@@ -16,6 +16,7 @@
       hugo
       neovim
       nodejs_20
+      nodePackages.prettier
       tmux
       wget
     ] ++ (lib.optionals pkgs.stdenv.isDarwin [
