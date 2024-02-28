@@ -26,7 +26,6 @@
         _HIHideMenuBar = false;
         "com.apple.springing.delay" = 0.0;
         "com.apple.springing.enabled" = true;
-        AppleInterfaceStyle = "Dark";
         ApplePressAndHoldEnabled = false;
         AppleShowScrollBars = "Always";
         InitialKeyRepeat = 15;
