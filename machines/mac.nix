@@ -1,7 +1,14 @@
 { pkgs, ... }: {
   services = { nix-daemon = { enable = true; }; };
-  nix.package = pkgs.nix;
-  nix.settings.trusted-users = [ "root" "zouhir" ];
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+    settings = {
+      trusted-users = [ "root" "zouhir" ]
+    };
+  }
 
   system = {
     defaults = {
